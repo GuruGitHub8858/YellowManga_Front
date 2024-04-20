@@ -1,0 +1,20 @@
+.overall {
+
+    display: flex;
+}
+
+.container {
+    margin-left: 500px;
+}
+
+.image {
+
+    background-image: url('../Asslets/back.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
