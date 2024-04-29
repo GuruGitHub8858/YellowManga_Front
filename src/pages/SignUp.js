@@ -43,7 +43,7 @@ export default function SignUp() {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (validateForm()) {
-            axios.post('http://localhost:5000/posting', { fname, lname, email, password })
+            axios.post('https://yellow-manga-back.onrender.com/posting', { fname, lname, email, password })
                 .then(() => {
                     alert('User created');
                     setFname('');

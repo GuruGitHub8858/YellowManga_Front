@@ -20,7 +20,7 @@ const Payment = () => {
     };
 
     const postData = () => {
-        axios.post('http://localhost:5000/pay', { name, email, ph, address, tp })
+        axios.post('https://yellow-manga-back.onrender.com/pay', { name, email, ph, address, tp })
             .then(() => {
                 setName('');
                 setEmail('');
