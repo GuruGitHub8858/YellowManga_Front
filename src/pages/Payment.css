@@ -1,0 +1,12 @@
+.addForm {
+
+    position: fixed;
+    left: 0;
+
+}
+
+.total {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
