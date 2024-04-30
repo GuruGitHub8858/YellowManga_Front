@@ -110,6 +110,22 @@
   padding: 0.8rem 0.5rem 0.2rem !important;
 }
 
+.signout {
+  position: fixed;
+  right: 0;
+  font-weight: bold;
+  padding: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  font-size: 18px !important;
+  margin-right: 5px;
+}
+
+.signout:hover {
+  color: crimson;
+}
+
+
 .nav-link-label {
   color: black;
   font-size: 18px !important;
@@ -178,6 +194,7 @@
     width: 25px !important;
     height: 3px !important;
   }
+
   ion-icon {
     font-size: 20px;
   }
@@ -195,5 +212,5 @@
     align-items: flex-end;
     gap: 5px;
   }
-  
+
 }
