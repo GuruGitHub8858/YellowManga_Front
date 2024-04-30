@@ -20,7 +20,7 @@ const SignIn = ({ setLoggedIn }) => {
     const navigate = useNavigate();
 
     const handleLogin = () => {
-        axios.post('https://yellow-manga-back.onrender.com/login', { email, password })
+        axios.post('http://localhost:5000/login', { email, password })
             .then(() => {
                 setLoggedIn(true);
                 alert("login sucessfully")

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { addToCart, decreaseQty, deleteProduct } from "../app/features/cart/cartSlice"; // Import clearCart action
 import DeleteIcon from '@mui/icons-material/Delete';
-
+import Footer from '../components/Footer/Footer';
 const Cart = () => {
   const { cartList } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
@@ -87,6 +87,9 @@ const Cart = () => {
           </Card>
         </Grid>
       </Grid>
+      <div>
+        <Footer />
+      </div>
     </section>
   );
 };

@@ -14,11 +14,12 @@ import Product from './pages/Product';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import './App.css'
-import Payment from './pages/Payment';
+import Checkout from './pages/Checkout';
+
 function App() {
   const [isLoggedIn, setLoggedIn] = useState(false);
-  return (
 
+  return (
     <Suspense fallback={<Loader />}>
       <Router>
         <ToastContainer
@@ -32,21 +33,36 @@ function App() {
           pauseOnHover
           theme="light"
         />
-        {isLoggedIn && <NavBar />} {/* Render Navbar if logged in */}
+        {isLoggedIn && <NavBar />}
         <Routes>
-          <Route path="/" element={isLoggedIn ? <Home /> : <SignIn setLoggedIn={setLoggedIn} />} />
-          <Route path="/shop" element={isLoggedIn ? <Shop /> : <Navigate to="/" />} />
-          <Route path="/shop/:id" element={isLoggedIn ? <Product /> : <Navigate to="/" />} />
-          <Route path="/cart" element={isLoggedIn ? <Cart /> : <Navigate to="/" />} />
+          <Route path="/" element={isLoggedIn ? <HomeFooterAware setLoggedIn={setLoggedIn} /> : <SignIn setLoggedIn={setLoggedIn} />} />
+          <Route path="/shop" element={isLoggedIn ? <ShopFooterAware /> : <Navigate to="/" />} />
+          <Route path="/shop/:id" element={isLoggedIn ? <ProductFooterAware /> : <Navigate to="/" />} />
+          <Route path="/cart" element={isLoggedIn ? <CartFooterAware /> : <Navigate to="/" />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/payment" element={<Payment />} />
+          <Route path="/payment" element={<Checkout />} />
         </Routes>
-        <div className='foot'>
-          {isLoggedIn && <Footer />} {/* Render Footer if logged in */}
-        </div>
       </Router>
     </Suspense>
   );
 }
+
+// Helper components for conditional footer rendering
+
+const HomeFooterAware = ({ setLoggedIn }) => {
+  return <Home setLoggedIn={setLoggedIn} />;
+};
+
+const ShopFooterAware = () => {
+  return <Shop />;
+};
+
+const ProductFooterAware = () => {
+  return <Product />;
+};
+
+const CartFooterAware = () => {
+  return <Cart />;
+};
 
 export default App;

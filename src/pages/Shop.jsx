@@ -1,12 +1,12 @@
+import { Fragment, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import FilterSelect from "../components/FilterSelect";
+import Footer from "../components/Footer/Footer";
 import SearchBar from "../components/SeachBar/SearchBar";
-import { Fragment, useState } from "react";
-import { products } from "../utils/products";
 import ShopList from "../components/ShopList";
-import Banner from "../components/Banner/Banner";
 import useWindowScrollToTop from "../hooks/useWindowScrollToTop";
-import './Shop.css'
+import { products } from "../utils/products";
+import './Shop.css';
 const Shop = () => {
   const [filterList, setFilterList] = useState(
     products.filter((item) => item.category === "manga")
@@ -33,7 +33,9 @@ const Shop = () => {
               <ShopList productItems={filterList} />
             </Container>
           </div>
-
+          <div>
+            <Footer />
+          </div>
         </section>
       </div>
 
