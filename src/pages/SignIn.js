@@ -20,7 +20,7 @@ const SignIn = ({ setLoggedIn }) => {
     const navigate = useNavigate();
 
     const handleLogin = () => {
-        axios.post('https://yellowmanga-backend.onrender.com/login', { email, password })
+        axios.post('http://13.210.68.21:5000/login', { email, password })
             .then(() => {
                 setLoggedIn(true);
                 alert("login sucessfully")
@@ -102,11 +102,7 @@ const SignIn = ({ setLoggedIn }) => {
                                 Sign In
                             </Button>
                             <Grid container>
-                                <Grid item xs>
-                                    <Link href="#" variant="body2">
-                                        Forgot password?
-                                    </Link>
-                                </Grid>
+
                                 <Grid item>
                                     <Link to='/signup'>
                                         {"Don't have an account? Sign Up"}

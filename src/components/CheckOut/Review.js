@@ -22,7 +22,7 @@ export default function Review() {
     const [tp, setTp] = useState(totalPrice);
     const [datas, setDatas] = React.useState([])
     function getdetails() {
-        axios.get('https://yellowmanga-backend.onrender.com/datas')
+        axios.get('http://13.210.68.21:5000/datas')
             .then((response) => {
                 setDatas(response.data)
             })

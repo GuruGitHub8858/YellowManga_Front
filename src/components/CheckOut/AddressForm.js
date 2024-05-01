@@ -26,7 +26,7 @@ export default function AddressForm() {
 
 
     function postDetails() {
-        axios.post('https://yellowmanga-backend.onrender.com/address', { fname, lname, address, address2, city, state, zipCode, country })
+        axios.post('http://13.210.68.21:5000/address', { fname, lname, address, address2, city, state, zipCode, country })
             .then(() => {
                 setFname('')
                 setAddress('')
