@@ -20,7 +20,12 @@ const SignIn = ({ setLoggedIn }) => {
     const navigate = useNavigate();
 
     const handleLogin = () => {
-        axios.post('http://13.210.60.148:5000/login', { email, password })
+        axios.post('http://52.65.143.166:5000/login', { email, password }, {
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*' // Allow requests from any origin
+            }
+        })
             .then(() => {
                 setLoggedIn(true);
                 alert("login sucessfully")

@@ -22,7 +22,7 @@ export default function Review() {
     const [tp, setTp] = useState(totalPrice);
     const [datas, setDatas] = React.useState([])
     function getdetails() {
-        axios.get('http://13.210.60.148:5000/datas')
+        axios.get('http://52.65.143.166:5000/datas')
             .then((response) => {
                 setDatas(response.data)
             })

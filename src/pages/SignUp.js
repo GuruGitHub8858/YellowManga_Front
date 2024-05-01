@@ -43,7 +43,7 @@ export default function SignUp() {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (validateForm()) {
-            axios.post('http://13.210.60.148:5000/posting', { fname, lname, email, password })
+            axios.post('http://52.65.143.166:5000/posting', { fname, lname, email, password })
                 .then(() => {
                     alert('User created');
                     setFname('');

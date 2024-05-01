@@ -26,7 +26,7 @@ export default function AddressForm() {
 
 
     function postDetails() {
-        axios.post('http://13.210.60.148:5000/address', { fname, lname, address, address2, city, state, zipCode, country })
+        axios.post('http://52.65.143.166:5000/address', { fname, lname, address, address2, city, state, zipCode, country })
             .then(() => {
                 setFname('')
                 setAddress('')
