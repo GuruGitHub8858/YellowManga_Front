@@ -35,7 +35,7 @@ export default function PaymentForm() {
     const [expirationDate, setExpirationDate] = React.useState('');
     const [name, setName] = React.useState('')
     function addPayment() {
-        axios.post('http://52.65.143.166:5000/cardetails', { name, cardNumber, cvv, expirationDate })
+        axios.post('https://yellowmanga-backend.onrender.com/cardetails', { name, cardNumber, cvv, expirationDate })
             .then(() => {
                 setCardNumber('')
                 setCvv('')
