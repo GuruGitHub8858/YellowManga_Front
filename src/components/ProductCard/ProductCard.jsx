@@ -37,7 +37,7 @@ const ProductCard = ({ title, productItem }) => {
       />
       <div className="product-like">
         <span onClick={like}>
-          <IconButton color={isClicked ? "secondary" : "default"}>
+          <IconButton color={isClicked ? "error" : "default"}>
             {isClicked ? <Favorite /> : <FavoriteBorder />}
           </IconButton>
         </span>

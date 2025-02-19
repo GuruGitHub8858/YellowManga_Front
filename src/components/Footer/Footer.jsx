@@ -28,6 +28,7 @@ const Footer = () => {
             <h2>Customer Care</h2>
             <ul>
               <li>Help Center </li>
+              <li>demo</li>
               <li>How to Buy </li>
               <li>Track Your Order </li>
               <li>Corporate & Bulk Purchasing </li>

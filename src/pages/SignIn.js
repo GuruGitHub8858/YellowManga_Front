@@ -20,7 +20,7 @@ const SignIn = ({ setLoggedIn }) => {
     const navigate = useNavigate();
 
     const handleLogin = () => {
-        axios.post('http://18.215.144.100:5000/login', { email, password })
+        axios.post('http://localhost:5000/login', { email, password })
             .then(() => {
                 setLoggedIn(true);
                 alert("login sucessfully")
@@ -68,7 +68,7 @@ const SignIn = ({ setLoggedIn }) => {
                             <LockOutlinedIcon />
                         </Avatar>
                         <Typography component="h1" variant="h5" >
-                            Sign in
+                            Login
                         </Typography>
                         <Box component="form" noValidate sx={{ mt: 1 }} >
                             <TextField

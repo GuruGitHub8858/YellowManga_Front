@@ -37,19 +37,19 @@ export const SliderData = [
   {
     id: 1,
     title: "50% Off For Your First Shopping",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis consequat eu, quam etiam at quis ut convallis.",
+    desc: "welcome to Yellow Matics",
     cover: sofaSlide,
   },
   {
     id: 2,
     title: "50% Off For Your First Shopping",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis consequat eu, quam etiam at quis ut convallis.",
+    desc: "welcome to Yellow Matics",
     cover: phone08,
   },
   {
     id: 3,
     title: "50% Off For Your First Shopping",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis consequat eu, quam etiam at quis ut convallis.",
+    desc: "welcome to Yellow Matics",
     cover: wireless01,
   },
   {

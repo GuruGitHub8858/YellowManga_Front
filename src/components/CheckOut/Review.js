@@ -22,7 +22,7 @@ export default function Review() {
     const [tp, setTp] = useState(totalPrice);
     const [datas, setDatas] = React.useState([])
     function getdetails() {
-        axios.get('https://yellowmanga-backend.onrender.com/datas')
+        axios.get('http://localhost:5000/datas')
             .then((response) => {
                 setDatas(response.data)
             })
@@ -78,7 +78,7 @@ export default function Review() {
                             </React.Fragment>
                         ))}
                     </Grid>
-                    <Button onClick={getdetails}>
+                    <Button onClick={getdetails} >
                         ShowDetails
                     </Button>
                 </div>

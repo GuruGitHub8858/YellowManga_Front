@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Suspense } from "react";
+// routing
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import NavBar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';

@@ -35,14 +35,30 @@ export default function PaymentForm() {
     const [expirationDate, setExpirationDate] = React.useState('');
     const [name, setName] = React.useState('')
     function addPayment() {
-        axios.post('https://yellowmanga-backend.onrender.com/cardetails', { name, cardNumber, cvv, expirationDate })
-            .then(() => {
-                setCardNumber('')
-                setCvv('')
-                setName('')
-                alert('card add sucessfully')
+        const payload = { name, cardNumber, cvv, expirationDate };
+        console.log("Sending data:", payload); // Debugging step
+
+        axios.post('http://localhost:5000/cardetails', payload)
+            .then((response) => {
+                console.log("Response from server:", response.data);
+                setCardNumber('');
+                setCvv('');
+                setName('');
+                setExpirationDate('');
+                alert('Card added successfully');
             })
+            .catch((err) => {
+                console.error("Error in Axios POST:", err);
+                if (err.response) {
+                    console.error("Response error:", err.response.data);
+                } else if (err.request) {
+                    console.error("Request error:", err.request);
+                } else {
+                    console.error("Axios error:", err.message);
+                }
+            });
     }
+
 
     const handlePaymentTypeChange = (event) => {
         setPaymentType(event.target.value);
